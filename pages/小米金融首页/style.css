@@ -1,0 +1,296 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.topbar{
+    height: 40px;
+    background: #333;
+}
+/* 中间居中 */
+.wrapper{
+   
+    /* background: yellow; */
+    width: 1200px;
+
+    margin: 0 auto;
+}
+.topbar-list{
+    height: 40px;
+    line-height: 40px;
+    float:left;
+}
+.topbar-list a{
+    color: #fff;
+    padding-left: 2px;
+}
+.topbar-list a:hover{
+    color:#ddd
+}
+.login{
+    float:right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.login a{
+    color: #fff;
+    padding-left: 2px;
+    font-size: 20px;
+}
+
+.header{
+   height: 100px;
+   z-index: 0;
+    /* background-color: red; */
+}
+
+.header ul  {
+    float:right;
+}
+.nav{
+    margin: 36px -23px 0 0;
+}
+.nav > li{
+    float:left;
+    height: 40px;
+    padding: 0 23px;
+}
+.nav > li > a{
+    color: #212121;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.nav > li > a:hover{
+    color: #e94400;
+}
+.logo {
+    float:left;
+    
+    
+}
+
+.logo img{
+    width: 187px;
+    height: 55px;
+    margin-top: 23px;
+}
+.nav-money{
+    position: relative;
+}
+.nav-sub-list ul{
+    position:absolute;
+    top: 40px;
+    left: -11px;
+    background: white;
+    width: 120px;
+    height: 92px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+.nav-sub-list{
+    display: none;
+}
+.nav-money:hover .nav-sub-list{
+    display: block;
+}
+
+.nav-sub-list ul{
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.nav-sub-list li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center; 
+    
+}
+.nav-sub-list li:hover{
+    background-color: #eee;
+}
+.nav-sub-list li a{
+    color: #434343;
+    padding-left: -20px;
+}
+.nav-sub-list li:hover a{
+    color: tomato;
+}
+.nav-sub-list::before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 45px;
+    top:35px;
+    border: 1px solid #e5e5e5;
+    transform: rotate(45deg);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    background-color: white;
+}
+
+
+/* banner开始 */
+.banner{
+    height: 640px;
+    background: url(./image/2.jpg) center 0 ;
+    
+}
+.banner h2{
+    font-size: 54px;
+    font-weight: 300;
+    text-align: center;padding-top: 193px;
+    color: #e5e5e5;
+}
+.download-btn{
+    text-align: center;margin-top: 36px;
+}
+.download-btn a{
+    color: #fff;
+    background-color: red;
+    font-size: 24px;
+    width: 240px;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    border-radius: 5px;
+}
+
+.content{
+    width: 1170px;
+    /* height: 392px; */
+    border: 1px #212121;
+    background-color: #fff;
+    margin-top: -80px;
+    padding: 30px 0 0 30px;
+    overflow: hidden;
+   
+}
+
+.list{
+    width: 360px;
+    float: left;
+    margin-right: 30px;
+}
+
+.list-img{
+    background: url(./image/3.png);
+    height: 180px;
+    overflow: hidden;
+
+}
+.list-blue .list-img{
+    background: url(./image/4.png);
+
+}
+.list-green .list-img{
+    background: url(./image/5.png);
+
+}
+
+.list-title{
+    font-size: 33px;
+    color: #ddd;
+    font-weight: 400;
+    margin: 44px 0 0 30px ;
+}
+.list-desc{
+    font-size: 33px;
+    color: #fff;
+    margin: 16px 0 0 30px;
+    font-weight: 400;
+}
+.list-info{
+    padding: 10px 30px;
+    color: #666;
+    font-size: 16px;
+}
+
+.list-info span{
+    color: tomato;
+}
+.list-blue .list-info span{
+    color: #4481c8;
+}
+.list-green .list-info span{
+    color: rgb(58, 199, 58);
+}
+.list-info div{
+    margin-top: 20px;
+}
+.list-info div.list-more{
+    border-top: 1px solid #ececec;
+    font-size: 16px;
+    color: tomato;
+    text-align: center;
+    margin: 40px 0 10px;
+    height: 62px;
+    line-height: 62px;
+}
+
+.footer{
+    height: 209px;
+    background: white;
+}
+.footer-left img{
+    width: 46px;
+    height: 46px;
+    float: left;
+    margin-right: 18px;
+}
+.footer-left-mes{
+    float: left;
+}
+.footer-left-mes li{
+    float: left;
+    border-right: 1px solid #575757;
+    padding: 0 8px;
+}
+.footer-left-mes li a{
+    color: #575757;
+    font-size: 14px;
+    display: block;
+    height: 14px;
+    line-height: 14px;
+}
+.about{
+    padding: 3px 0 7px;
+    overflow: hidden;
+}
+.contack li{
+    font-size: 12px;
+    color: #6d6d6d;
+    height: 14px;
+    line-height: 14px;
+}
+.right-title{
+    color: #575757;
+    font-size: 14px;
+
+}
+
+.right-tel{
+    color: #e94400;
+    font-size: 26px;
+}
+.right-time{
+    color: #575757;
+    font-size: 12px;
+}
+.footer-left{
+    float: left;
+    margin-top: 109px;
+}
+.footer-right{
+    float: right;
+    margin-top: 90px;
+}

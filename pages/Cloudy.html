@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudy</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: #87CEFA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            /* background-color: #ccc; */
+            position: relative;
+        }
+        .select{
+            margin-top:-90px;
+            text-align: center;
+            color: #3d80ba;
+        }
+        .select a{
+            text-decoration: none;
+            color: #666;
+        }
+        .main{
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            position: absolute;
+            left: 70px;
+            top: 100px;
+            border-radius: 50%;
+            box-shadow: 40px -20px 0 0 aliceblue,
+                        100px -35px 0 0 aliceblue,
+                        160px -15px 0 0 aliceblue,
+                        140px 15px 0 0 aliceblue,
+                        60px 20px 0 0 aliceblue;
+            animation: move 2s linear infinite alternate;
+        }
+        @keyframes move{
+            100%{
+                transform: translateX(90px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="select">
+            <h1>你喜欢晴天还是<a href="Rain.html">雨天</a></h1>
+        </div>
+        <div class="main"></div>
+    </div>
+</body>
+</html>

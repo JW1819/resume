@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图 | by 纪委蜀黍</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contaniner">
+        <div class="item left" data-color="radial-gradient(#999,#cc6c01)"><img src="./image/鸣人.png" width="100%" alt=""></div>
+        <div class="item middle" data-color="radial-gradient(#999,#293242)"><img src="./image/佐助.png" width="100%" alt=""></div>
+        <div class="item right" data-color="radial-gradient(#999,#bc4641)"><img src="./image/小樱.png" width="100%" alt=""></div>
+    </div>
+
+    <script>
+        //获取元素
+        const items = document.getElementsByClassName('item');
+
+        for(let i=0;i<items.length;i++){
+            items[i].addEventListener('click',function(){
+                //是被点击元素处于中间位置
+                this.classList.remove('left','middle','right');
+                this.classList.add('middle');
+                //修改背景颜色
+                document.body.style.background = this.dataset.color;
+                //左侧元素变化
+                let left =this.previousElementSibling ?? items[items.length-1];
+                left.classList.remove('left','middle','right');
+                left.classList.add('left');
+                // 右侧元素变化
+                let right =this.nextElementSibling ?? items[0];
+                right.classList.remove('left','middle','right');
+                right.classList.add('right');
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>

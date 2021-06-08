@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪委蜀黍的云播放器</title>
+    <!-- 样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="wrap">
+        <!-- 主体区域 -->
+        <div class="play_wrap" id="player">
+            <div class="search_bar">
+                <img src="https://sm.ms/image/FO95hAIXyZqoHct"  alt="" />
+                <!-- 搜索歌曲 -->
+                <input type="text" name="" autocomplete="off" v-model="query" 
+                @keyup.enter="searchMusic()" id="">
+            </div>
+
+            <div class="center_con">
+                <!-- 搜索歌曲列表 -->
+                <div class="song_wrapper">
+                    <ul class="song_list">
+                        <li v-for="item in musicList">
+                            <a href="javascript:;" @click="playMusic(item.id)"></a> 
+                            <b>{{ item.name }}</b> 
+                            <span v-if="item.mvid!=0" @click="playMv(item.mvid)"><i></i></span>
+                        </li>
+                    </ul>
+                    <img src="https://i.loli.net/2020/03/23/dor23bhZtIvK17X.png"  class="switch_btn" alt="">                      
+                </div>
+                <!-- 歌曲信息容器 -->
+                <div class="player_con" :class={playing:isPlaying}>
+                    <img src="https://i.loli.net/2020/03/23/gZHko2WlpJNcGPv.png"  class="play_bar" alt=""/>
+                    <!-- 黑胶碟片 -->
+                    <img src="https://i.loli.net/2020/03/23/hQPuH4gNRx7XayI.png" class="disc autoRotate" />
+
+                    <img :src="musicCover" class="cover autoRotate" />
+                </div>
+                <!-- 评论区 -->
+                <div class="comment_wrapper" ref="comment_wrapper">
+                   <h5 class="title">热门留言</h5>
+                   <div class="comment_list">
+
+                    <dl v-for="item in hotComments">
+                        <dt>
+                            <img :src="item.user.avatarUrl" alt="">
+                        </dt>
+                        <dd class="name">{{item.nickname}}</dd>
+                        <dd class="detail">{{item.content}}</dd>
+                    </dl>
+                   </div>
+                   <img src="https://i.loli.net/2020/03/23/dor23bhZtIvK17X.png" class="right_line">
+                </div>
+            </div>
+                <div class="audio_con" >
+                   <audio @play="play" @pause="pause" class="myaudio" :src="musicUrl" controls autoplay loop ref="audio"></audio>   
+                </div>
+                <!-- 视频遮罩 -->
+                <div class="video_con" v-show="isShow" style="display:none">
+                    <video :src="mvUrl" ref="video" controls="controls"></video>
+                    <div class="mask" @click="hide"></div>
+                </div>
+
+             </div>
+    </div>
+<!-- 开发VUE的环境 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- 官方axios地址 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

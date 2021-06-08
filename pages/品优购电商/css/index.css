@@ -1,0 +1,172 @@
+.main{
+    margin-left: 220px;
+    width: 980px;
+    height: 455px;
+}
+.focus{
+    float: left;
+    width: 721px;
+    height: 455px;
+    
+}
+.newsflash{
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.newsflash .news{
+    height: 165px;
+    border: 1px solid #ccc;
+}
+.news_hd{
+   height: 33px;
+   line-height: 33px;
+   border-bottom: 1px dotted #e4e4e4; 
+   padding: 0 15px;
+}
+.news_hd h5{
+    float: left;
+    font-size: 14px;
+}
+.news_hd .more{
+    float: right;
+}
+.news_hd .more::after{
+    content: '\e920';
+    font-family: 'icomoon';
+}
+.news_bd {
+    padding: 5px 15px 0;
+}
+
+.news_bd ul li{
+    height: 24px;
+    line-height: 24px;
+}
+.newsflash .lifeservice{
+    height: 209px;
+    border:  1px solid #ccc;
+    border-top: 0;
+    overflow: hidden;
+}
+.lifeservice ul{
+    width: 252px;
+    text-align: center;
+}
+.lifeservice ul li{
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.reduce{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    background-color: lightgreen;
+}
+.lifeservice ul li i{
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: url(../image/icons.png) no-repeat -19px -15px;
+    margin-top: 12px;  
+
+}
+.newsflash .bargain{
+    margin-top: 5px;
+}
+.recom{
+    height: 163px;
+    margin-top: 20px;
+}
+.recom_hd{
+    float: left;
+    width: 205px;
+    height: 163px;    
+    background-color: pink;  
+}
+.recom_bd{
+    float: left;
+}
+.recom_bd ul li{
+    position: relative;
+    float: left;
+}
+.recom_bd ul li img{
+    width: 248px;
+    height: 163px;
+}
+.recom_bd ul li:nth-child(-n+3)::after{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    content: '';
+    width: 1px; 
+    height: 145px;
+}
+/* 家用电器模块 */
+.box_hd{
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+.box_hd h3{
+    float: left;
+    font-size: 16px; 
+    color: #c81623;
+}
+.tab_list{
+    float: right;
+    line-height: 30px;
+}
+.tab_list ul li{
+    float: left;
+}
+.tab_list ul li a{
+    margin: 0 15px;
+}
+.floor .w{
+    margin-top: 30px;
+}
+.box_bd{
+    height: 361px;
+}
+.tab_list_item>div{
+    float: left;
+    height: 361xp;
+}
+.col_210{
+    width: 210px;
+    background-color: #f9f9f9;
+}
+.col_210 ul{
+    margin-left: 12px;
+}
+.col_210 ul li{
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 34px;
+    margin-right: 10px;
+}
+.col_329{
+    width: 329px;
+}
+.col_221{
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.col_219{
+    width: 219px;
+}
+.bb{
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+

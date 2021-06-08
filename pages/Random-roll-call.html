@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点名系统--by纪委老师</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        body{
+            background-color: #414141;
+        }
+        .container{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h2{
+            font-size: 80px;
+        }
+        span{position: absolute;
+            left: 90px;
+            font-size: 50px;
+        }
+        h2,span{
+            text-shadow: 0 0 10px #dfdfdf;
+            background: linear-gradient(45deg,#14ffe9,#ffeb3b,pink);
+            -webkit-background-clip: text;
+            /* 以文字作为裁剪区，文字背景即是区域背景，文字之外的区域将被剪掉 */
+            -webkit-text-fill-color: transparent;
+            animation: run 0.9s linear infinite;
+        }
+        @keyframes run{
+            to{filter:hue-rotate(360deg);}
+        }
+        .btn{
+            position: absolute;
+            left: 120px;
+            top: 200px;
+            width: 80px;
+            height: 25px;
+            border-radius: 10%;
+            background-color: #ccc;
+            box-shadow: 0 0 10px #fff;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>随机点名</h2>
+        <span class="uname"></span>
+        <button class="btn">start</button>
+    </div>
+    <script>
+        let uname = document.querySelector('.uname');
+        let btn = document.querySelector('.btn');
+        let namelist = ['邢梓彤','丁文曦','林梦渝','李俊樟','马靖婷','王天泽','张艺兴','易袁缘','花灵蕴','王苑霖'];
+        // 创建随机数
+        function getrandom(a,b){
+            return Math.floor(Math.random()*(b-a) + a);
+            // 生成一个[a,b)之间的随机数，并取整数部分
+        }
+        function clock(){
+            let random = namelist[getrandom(0,namelist.length)];
+            uname.innerHTML = random;
+        }
+        // window.setInterval('clock()',30)
+        let time =self.setInterval('clock()',30);
+        clearInterval(time);
+        let flag = true;
+        btn.onclick = function(){
+            // flag为false时，停止刷新，按钮文字变成start
+            if(flag == false){
+                time = window.clearInterval(time);
+                btn.innerHTML = 'start';
+                flag = true;
+            }else{
+                // flag为false时，停止刷新，按钮文字变成start
+                time = self.setInterval('clock()',30);
+                btn.innerHTML = 'stop';
+                flag = false;
+            }
+        }
+    </script>
+</body>
+</html>
