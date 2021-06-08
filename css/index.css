@@ -5,15 +5,13 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd {
   font-family: "微软雅黑";
   color: #666;
 }
-html{
-  font-size: 24px;
-}
+
 @media screen and (max-width: 760px) {
-  html{
-    font-size: 8px;
+  .container .title{
+    width: 80%;
   }
-  .container .title {
-    width: 60%;
+  .container .title h3{
+    font-size: 16px;
   }
   .container .btns{
     margin: 0 auto;
@@ -23,11 +21,11 @@ html{
   .container .btns a{
     display: block;
     width: 31%;
-    height: 25%;
+    height: 30px;
     float: left;
     text-align: center;
     padding-left: 2px;
-    line-height: 4rem;
+    line-height: 30px;
     background-color: rgba(0,164,238,0.4);
     color: #fff;
     margin-right: 3px;
@@ -45,6 +43,7 @@ body{
 a {
   text-decoration: none;
   color: #fff;
+  -webkit-tap-highlight-color: transparent;
 }
 .container{
   position: relative;
@@ -74,13 +73,11 @@ a {
   }
 }
 .nav{
-  width: 15%;
-  height: 15%;
-  margin-bottom: 5%;
+  width: 20%;
+  height: 20%;
 }
 .nav img{
   width: 100%;
-  
   transition: all 0.5s linear;
 }
 .nav img:hover{
@@ -107,7 +104,7 @@ a {
   }
 }
 .title {
-  width: 50%;
+  width: 60%;
 }
 .title h3{
   display: block;
@@ -115,21 +112,21 @@ a {
   text-align: center;
   color: #fff;
   /* line-height: 1rem; */
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 5% auto;
 }
 .btns{
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   height: 20%;
 }
 .btns a{
   display: block;
-  width: 31%;
-  height: 40%;
+  width: 32%;
+  height: 50px;
   float: left;
   text-align: center;
-  line-height: 2.3rem;
+  line-height: 50px;
   background-color: rgba(0,164,238,0.4);
   color: #fff;
   margin-right: 3px;
