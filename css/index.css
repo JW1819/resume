@@ -5,7 +5,39 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd {
   font-family: "微软雅黑";
   color: #666;
 }
-
+html{
+  font-size: 24px;
+}
+@media screen and (max-width: 760px) {
+  html{
+    font-size: 8px;
+  }
+  .container .title {
+    width: 60%;
+  }
+  .container .btns{
+    margin: 0 auto;
+    width: 80%;
+    height: 20%;
+  }
+  .container .btns a{
+    display: block;
+    width: 31%;
+    height: 25%;
+    float: left;
+    text-align: center;
+    padding-left: 2px;
+    line-height: 4rem;
+    background-color: rgba(0,164,238,0.4);
+    color: #fff;
+    margin-right: 3px;
+    border-radius: 5px;
+    background-image: url(../uploads/icon.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+  }
+}
 body{
   height: 100vh;
   background-color: pink;
@@ -15,6 +47,7 @@ a {
   color: #fff;
 }
 .container{
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,16 +57,43 @@ a {
   background: url(../uploads/bg1.jpeg);
   background-size:cover;
 }
+
+.container .house {
+  width: 200px;
+  height: 100px;
+  background: url(../uploads/house.png);
+  transform: rotateY(180deg);
+  animation: run .6s steps(12) infinite;
+}
+@keyframes run {
+  0% {
+    background-position: 0,0;
+  }
+  100% {
+    background-position: -2400px,0;
+  }
+}
+.nav{
+  width: 15%;
+  height: 15%;
+  margin-bottom: 5%;
+}
 .nav img{
-  width: 150px;
+  width: 100%;
+  
   transition: all 0.5s linear;
 }
 .nav img:hover{
   transform: rotate(-360deg); 
 }
 .center{
-  margin-top: 10%;
-  animation: change 2s linear;
+  width: 50%;
+}
+.center img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  animation: change 1s linear;
 }
 @keyframes change {
   0% {
@@ -46,30 +106,36 @@ a {
     transform: scale(1);
   }
 }
+.title {
+  width: 50%;
+}
 .title h3{
+  display: block;
+  width: 100%;
+  text-align: center;
   color: #fff;
-  line-height: 100px;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 15px;
+  /* line-height: 1rem; */
+  font-size: 1rem;
+  margin: 5% auto;
 }
 .btns{
-  width: 520px;
-  height: 50px;
-  bottom: 100px;
+  margin: 0 auto;
+  width: 50%;
+  height: 20%;
 }
 .btns a{
   display: block;
-  width: 170px;
-  height: 50px;
+  width: 31%;
+  height: 40%;
   float: left;
   text-align: center;
-  line-height: 50px;
+  line-height: 2.3rem;
   background-color: rgba(0,164,238,0.4);
   color: #fff;
   margin-right: 3px;
   border-radius: 5px;
   background-image: url(../uploads/icon.png);
+  background-size: 20%;
   background-repeat: no-repeat;
   background-position: 8px center;
 }
