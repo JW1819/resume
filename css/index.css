@@ -116,13 +116,15 @@ a {
   margin: 5% auto;
 }
 .btns{
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   width: 60%;
   height: 20%;
 }
 .btns a{
   display: block;
-  width: 32%;
+  width: 20%;
   height: 50px;
   float: left;
   text-align: center;
